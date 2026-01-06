@@ -107,7 +107,7 @@ const Index = () => {
           >
             {/* 🎥 VIDEO SOURCE: Replace with your video URL */}
             <source
-              src="public/videos/lord.pm4"
+              src="videos/lord.mp4"
               type="video/mp4"
             />
           </video>

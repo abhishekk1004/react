@@ -1,16 +1,73 @@
-# React + Vite
+# Abhishek's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack portfolio application with React frontend and Django backend.
 
-Currently, two official plugins are available:
+## 📁 Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+portfolio_/
+├── frontend/          # React + Vite + Tailwind CSS
+│   ├── src/
+│   ├── package.json
+│   └── README.md
+└── backend/           # Django REST API
+    ├── manage.py
+    ├── requirements.txt
+    └── README.md
+```
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Access at `http://localhost:5173`
 
-## Expanding the ESLint configuration
+### Backend Setup
+```bash
+cd backend
+python -m venv venv
+source venv/Scripts/activate  # Windows
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+Access at `http://localhost:8000`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📝 Features
+
+- ✨ Modern React UI with animations
+- 🎨 Tailwind CSS styling
+- 🔐 Django REST API
+- 📱 Responsive design
+- 🌙 Dark mode support
+
+## 🔗 API Connection
+
+Frontend connects to Django backend at:
+```
+http://localhost:8000/api/
+```
+
+Configure in `frontend/src/lib/api.ts`
+
+## 📦 Technologies
+
+**Frontend:**
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+
+**Backend:**
+- Django
+- Django REST Framework
+- PostgreSQL (or SQLite)
+
+## 📄 License
+
+MIT
