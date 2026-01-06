@@ -1,3 +1,30 @@
+/**
+ * =============================================================================
+ * BLOG PAGE
+ * =============================================================================
+ * 
+ * 📍 WHAT TO CUSTOMIZE:
+ * 
+ * 1. BLOGS DATA (Lines ~20-90): Add your real blog posts
+ *    - title: Blog post title
+ *    - excerpt: Short description/preview
+ *    - date: Publication date
+ *    - readTime: Estimated read time
+ *    - image: Featured image URL
+ *    - category: Blog category
+ *    - slug: URL-friendly identifier
+ *    - featured: Set true for featured posts
+ * 
+ * 2. CATEGORIES (Line ~95): Update with your blog categories
+ * 
+ * 🔧 WITH DJANGO BACKEND:
+ * - Blogs will be fetched from your database
+ * - Category filtering will work dynamically
+ * - Load More will paginate results
+ * 
+ * =============================================================================
+ */
+
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -5,13 +32,19 @@ import SectionHeader from '@/components/SectionHeader';
 import BlogCard from '@/components/BlogCard';
 import { Button } from '@/components/ui/button';
 
+/**
+ * ============================================
+ * 📝 BLOGS DATA
+ * Replace with your actual blog posts
+ * ============================================
+ */
 const blogs = [
   {
     title: "Building Scalable APIs with Django REST Framework",
     excerpt: "Learn how to design and implement production-ready APIs using Django REST Framework with best practices for authentication, pagination, and caching.",
     date: "Dec 28, 2024",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800", // 🖼️ Blog thumbnail
     category: "Django",
     slug: "building-scalable-apis-django",
     featured: true,
@@ -79,8 +112,29 @@ const blogs = [
     category: "Django",
     slug: "django-security-best-practices",
   },
+  /* 
+   * ➕ ADD MORE BLOGS HERE
+   * Copy the structure above and paste below:
+   * 
+   * {
+   *   title: "Your Blog Title",
+   *   excerpt: "Short description of the blog post...",
+   *   date: "Jan 1, 2025",
+   *   readTime: "5 min read",
+   *   image: "https://your-blog-image.jpg",
+   *   category: "Category",
+   *   slug: "your-blog-slug",
+   *   featured: false,
+   * },
+   */
 ];
 
+/**
+ * ============================================
+ * 📂 CATEGORIES
+ * Update with your blog categories
+ * ============================================
+ */
 const categories = ["All", "Django", "Python", "Machine Learning", "Deep Learning", "DevOps", "Photography"];
 
 const Blog = () => {
@@ -92,7 +146,10 @@ const Blog = () => {
           subtitle="Thoughts, tutorials, and insights on development, machine learning, DevOps, and photography"
         />
 
-        {/* Categories Filter */}
+        {/* ================================================================
+            CATEGORIES FILTER
+            Click to filter blogs by category
+            ================================================================ */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -111,14 +168,16 @@ const Blog = () => {
           ))}
         </motion.div>
 
-        {/* Blog Grid */}
+        {/* ================================================================
+            BLOG GRID
+            ================================================================ */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogs.map((blog, index) => (
             <BlogCard key={blog.slug} {...blog} />
           ))}
         </div>
 
-        {/* Load More */}
+        {/* Load More Button */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

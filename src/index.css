@@ -1,3 +1,18 @@
+/**
+ * =============================================================================
+ * ABHISHEK KUSHWAHA PORTFOLIO - DESIGN SYSTEM
+ * =============================================================================
+ * 
+ * COLOR PALETTE: Blue, Fuchsia, Maroon, Black & Golden
+ * 
+ * To customize colors, modify the HSL values below:
+ * - Hue (0-360): Color type (e.g., 220 = blue, 300 = fuchsia, 350 = maroon, 45 = gold)
+ * - Saturation (0-100%): Color intensity
+ * - Lightness (0-100%): How light or dark
+ * 
+ * =============================================================================
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
@@ -5,97 +20,118 @@
 @tailwind utilities;
 
 @layer base {
+  /* 
+   * =========================================================================
+   * LIGHT MODE COLORS
+   * Uncomment and modify these if you want a custom light theme
+   * =========================================================================
+   */
   :root {
-    --background: 45 30% 96%;
-    --foreground: 30 10% 15%;
+    --background: 45 15% 95%;        /* Warm cream background */
+    --foreground: 350 10% 15%;       /* Dark maroon text */
 
-    --card: 45 25% 92%;
-    --card-foreground: 30 10% 15%;
+    --card: 45 20% 92%;              /* Light cream cards */
+    --card-foreground: 350 10% 15%;
 
-    --popover: 45 30% 96%;
-    --popover-foreground: 30 10% 15%;
+    --popover: 45 15% 95%;
+    --popover-foreground: 350 10% 15%;
 
-    --primary: 35 85% 45%;
-    --primary-foreground: 45 30% 98%;
+    /* PRIMARY: Golden - Main accent color */
+    --primary: 45 90% 45%;           /* Golden color */
+    --primary-foreground: 350 10% 10%;
 
-    --secondary: 30 15% 85%;
-    --secondary-foreground: 30 10% 20%;
+    --secondary: 350 15% 88%;        /* Light maroon tint */
+    --secondary-foreground: 350 15% 25%;
 
-    --muted: 30 10% 88%;
-    --muted-foreground: 30 8% 45%;
+    --muted: 350 8% 88%;
+    --muted-foreground: 350 8% 45%;
 
-    --accent: 35 90% 50%;
-    --accent-foreground: 30 10% 10%;
+    /* ACCENT: Fuchsia - Secondary accent */
+    --accent: 300 70% 50%;           /* Fuchsia */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 82%;
-    --input: 30 15% 85%;
-    --ring: 35 85% 45%;
+    --border: 350 10% 80%;
+    --input: 350 10% 85%;
+    --ring: 45 90% 45%;
 
     --radius: 0.75rem;
 
-    --vintage-cream: 45 40% 95%;
-    --vintage-gold: 35 85% 50%;
-    --vintage-bronze: 30 60% 35%;
-    --vintage-sepia: 30 30% 70%;
+    /* CUSTOM PALETTE COLORS - Edit these for your brand */
+    --vintage-cream: 45 40% 95%;     /* Cream/ivory background tones */
+    --vintage-gold: 45 90% 50%;      /* Rich golden accents */
+    --vintage-bronze: 35 60% 35%;    /* Deep bronze/brown */
+    --vintage-sepia: 30 30% 70%;     /* Sepia overlay effect */
 
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
 
-    --sidebar-background: 45 25% 94%;
-    --sidebar-foreground: 30 10% 20%;
-    --sidebar-primary: 35 85% 45%;
-    --sidebar-primary-foreground: 45 30% 98%;
-    --sidebar-accent: 30 20% 88%;
-    --sidebar-accent-foreground: 30 10% 15%;
-    --sidebar-border: 30 15% 82%;
-    --sidebar-ring: 35 85% 45%;
+    --sidebar-background: 45 20% 94%;
+    --sidebar-foreground: 350 10% 20%;
+    --sidebar-primary: 45 90% 45%;
+    --sidebar-primary-foreground: 350 10% 10%;
+    --sidebar-accent: 350 15% 88%;
+    --sidebar-accent-foreground: 350 10% 15%;
+    --sidebar-border: 350 10% 80%;
+    --sidebar-ring: 45 90% 45%;
   }
 
+  /* 
+   * =========================================================================
+   * DARK MODE COLORS - YOUR MAIN THEME
+   * Blue, Fuchsia, Maroon, Black & Golden
+   * =========================================================================
+   */
   .dark {
-    --background: 220 20% 8%;
-    --foreground: 45 20% 92%;
+    /* BACKGROUND: Deep black with blue undertone */
+    --background: 230 25% 6%;        /* Deep blue-black */
+    --foreground: 45 20% 92%;        /* Warm cream text */
 
-    --card: 220 18% 12%;
+    /* CARDS: Slightly lighter dark */
+    --card: 230 20% 10%;             /* Dark blue-gray cards */
     --card-foreground: 45 20% 92%;
 
-    --popover: 220 18% 10%;
+    --popover: 230 20% 8%;
     --popover-foreground: 45 20% 92%;
 
-    --primary: 38 90% 55%;
-    --primary-foreground: 220 20% 8%;
+    /* PRIMARY: Golden - Change this for main button/link color */
+    --primary: 45 95% 55%;           /* Bright golden */
+    --primary-foreground: 230 25% 6%;
 
-    --secondary: 220 15% 18%;
+    /* SECONDARY: Maroon tones */
+    --secondary: 350 30% 18%;        /* Deep maroon */
     --secondary-foreground: 45 15% 85%;
 
-    --muted: 220 12% 16%;
-    --muted-foreground: 220 8% 55%;
+    --muted: 230 15% 14%;            /* Muted blue-gray */
+    --muted-foreground: 230 10% 55%;
 
-    --accent: 38 95% 60%;
-    --accent-foreground: 220 20% 8%;
+    /* ACCENT: Fuchsia - Change this for hover/highlight effects */
+    --accent: 300 80% 60%;           /* Vibrant fuchsia */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 20%;
-    --ring: 38 90% 55%;
+    --border: 230 20% 18%;           /* Blue-tinted borders */
+    --input: 230 20% 20%;
+    --ring: 45 95% 55%;              /* Golden focus ring */
 
+    /* CUSTOM PALETTE COLORS */
     --vintage-cream: 45 15% 85%;
-    --vintage-gold: 38 90% 55%;
+    --vintage-gold: 45 95% 55%;      /* ⭐ Main golden accent */
     --vintage-bronze: 35 70% 45%;
     --vintage-sepia: 30 20% 40%;
 
-    --sidebar-background: 220 18% 10%;
+    --sidebar-background: 230 20% 8%;
     --sidebar-foreground: 45 15% 90%;
-    --sidebar-primary: 38 90% 55%;
-    --sidebar-primary-foreground: 220 20% 8%;
-    --sidebar-accent: 220 12% 18%;
+    --sidebar-primary: 45 95% 55%;
+    --sidebar-primary-foreground: 230 25% 6%;
+    --sidebar-accent: 350 30% 18%;   /* Maroon sidebar accent */
     --sidebar-accent-foreground: 45 15% 88%;
-    --sidebar-border: 220 15% 18%;
-    --sidebar-ring: 38 90% 55%;
+    --sidebar-border: 230 20% 18%;
+    --sidebar-ring: 45 95% 55%;
   }
 }
 
@@ -115,10 +151,21 @@
 }
 
 @layer utilities {
+  /* 
+   * GRADIENT TEXT - Uses primary to accent colors
+   * Modify the gradient stops to change the text gradient effect
+   */
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,          /* Golden */
+      hsl(var(--accent)) 50%,           /* Fuchsia */
+      hsl(var(--primary)) 100%          /* Golden */
+    );
   }
 
+  /* GLASS CARD - Frosted glass effect */
   .glass-card {
     @apply backdrop-blur-xl bg-card/70 border border-border/50 shadow-xl;
   }
@@ -127,6 +174,7 @@
     @apply backdrop-blur-xl bg-background/80 border border-border/30;
   }
 
+  /* VINTAGE SHADOW - Warm golden shadow */
   .vintage-shadow {
     box-shadow: 
       0 4px 6px -1px hsl(var(--vintage-bronze) / 0.1),
@@ -134,6 +182,7 @@
       0 0 0 1px hsl(var(--vintage-gold) / 0.05);
   }
 
+  /* FILM GRAIN - Cinematic texture overlay */
   .film-grain {
     position: relative;
   }
@@ -148,6 +197,7 @@
     mix-blend-mode: overlay;
   }
 
+  /* VIGNETTE - Dark edges effect for hero sections */
   .vignette {
     position: relative;
   }
@@ -160,6 +210,7 @@
     pointer-events: none;
   }
 
+  /* HOVER LIFT - Card hover animation */
   .hover-lift {
     @apply transition-all duration-500 ease-out;
   }
@@ -171,10 +222,16 @@
       0 8px 10px -6px hsl(var(--primary) / 0.1);
   }
 
+  /* GLOW EFFECTS */
   .glow-accent {
     box-shadow: 0 0 40px hsl(var(--accent) / 0.3);
   }
 
+  .glow-primary {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.3);
+  }
+
+  /* ANIMATIONS */
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -208,7 +265,7 @@
   }
 }
 
-/* Custom scrollbar */
+/* CUSTOM SCROLLBAR - Matches golden theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -226,8 +283,8 @@
   background: hsl(var(--primary) / 0.7);
 }
 
-/* Selection color */
+/* SELECTION COLOR - Fuchsia highlight when selecting text */
 ::selection {
-  background: hsl(var(--primary) / 0.3);
+  background: hsl(var(--accent) / 0.3);
   color: hsl(var(--foreground));
 }

@@ -39,3 +39,4 @@ const SectionHeader = ({ title, subtitle, align = 'center' }: SectionHeaderProps
 };
 
 export default SectionHeader;
+
